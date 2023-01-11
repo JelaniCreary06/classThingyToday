@@ -1,0 +1,31 @@
+public String[] removeMessages(LogMessage[] messages, String key) {
+String checkArray[messages.length], returnArray[];
+
+int i = 0, in = 0;
+for (String msg : messages) {
+
+if (msg.indexOf(key) != -1) {
+    checkArray[i] = msg;
+    i++;
+}
+}
+
+for (String msg : checkArray) {
+
+if (msg != null) {
+i++;
+}
+}
+
+returnArray = new String[i];
+
+for(int index = 0; i < checkArray.length; index++) {
+  
+if (checkArray[index] != null) returnArray[in] = checkArray[index]
+in++;
+}
+
+
+
+return returnArray;
+
